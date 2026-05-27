@@ -285,12 +285,13 @@
   60%  { transform: translateX(120%); }
   100% { transform: translateX(120%); }
 }
-CSS (localizaciones.css)
+
 /* =========================================
    AJUSTES EXTRA
 ========================================= */
 
 .loc-page {
+
   overflow-x: hidden;
 }
 
