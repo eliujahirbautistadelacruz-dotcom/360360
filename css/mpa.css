@@ -1,0 +1,179 @@
+/* ================================
+   MAPA DE MÉXICO - Versión Mejorada
+   ================================ */
+
+#mapa-mexico {
+  text-align: center;
+  margin: 50px auto;
+  padding: 30px 0;
+  background: linear-gradient(180deg, #0f0f0f, #1a001a);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+#mapa-mexico h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(221, 1, 192, 0.5);
+}
+
+/* Mapa más grande y bonito */
+#mapa-mexico svg {
+  width: 720px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.7));
+  transition: transform 0.4s ease;
+}
+
+#mapa-mexico svg:hover {
+  transform: scale(1.03);
+}
+
+/* Estados en gris oscuro elegante */
+#mexicoMap path {
+  fill: #1f1f1f;
+  stroke: #444444;
+  stroke-width: 2.5;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Estados destacados en rosa con brillo */
+.estado-rosa {
+  fill: #dd01c0 !important;
+  filter: drop-shadow(0 0 12px #ff1493);
+}
+
+/* Hover */
+#mexicoMap path:hover {
+  fill: #ff69b4;
+  stroke: #ffffff;
+  stroke-width: 3;
+}
+
+.estado-rosa:hover {
+  fill: #ff1493 !important;
+  filter: drop-shadow(0 0 20px #ff69b4);
+}
+
+/* Tooltip mejorado */
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  pointer-events: none;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(221, 1, 192, 0.5);
+  border: 1px solid #dd01c0;
+}
+
+/* Cuadraditos mejorados */
+.cuadrados-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px auto 20px;
+  flex-wrap: wrap;
+}
+
+.cuadrado {
+  background: linear-gradient(135deg, #dd01c0, #ff1493);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 6px 20px rgba(221, 1, 192, 0.4);
+  transition: all 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+}
+
+.cuadrado:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(221, 1, 192, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #mapa-mexico svg {
+    width: 95%;
+  }
+  
+  .cuadrado {
+    min-width: 140px;
+    padding: 10px 20px;
+    font-size: 0.98rem;
+  }
+}
+/* Leyenda del mapa */
+.map-legend {
+    text-align: center;
+    margin: 30px auto 40px;
+    color: #fff;
+}
+
+.map-legend p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #ff69b4;
+}
+
+.map-legend small {
+    font-size: 0.9rem;
+}
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.92);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    pointer-events: none;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(221, 1, 192, 0.5);
+    border: 1px solid #dd01c0;
+    max-width: 220px;
+    white-space: pre-line;
+}
+#mexicoMap path {
+  fill: #1f1f1f;
+  stroke: #444444;
+  stroke-width: 2.5;
+  transition: all 0.4s ease;
+}
+
+.estado-rosa {
+  fill: #dd01c0 !important;
+  filter: drop-shadow(0 0 15px #ff1493);
+}
+
+#mexicoMap path:hover {
+  stroke: #ffffff;
+  stroke-width: 3.5;
+}
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.92);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    pointer-events: none;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(221, 1, 192, 0.5);
+    border: 1px solid #dd01c0;
+    max-width: 240px;
+}
