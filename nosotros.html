@@ -92,109 +92,112 @@
     </div>
 
    <!-- ══════════════════════════════════════
-         NUESTRA HISTORIA — TIMELINE (ESTILO ORIGINAL)
+                   NUESTRA HISTORIA 
          ══════════════════════════════════════ -->
-    <section class="historia-section">
-        <div class="section-line">
-            <span class="section-label">Nuestra trayectoria</span>
-            <h2>Cómo llegamos hasta aquí</h2>
+  <!-- ══════════════════════════════════════
+               NUESTRA HISTORIA 
+     ══════════════════════════════════════ -->
+<section class="historia-section">
+    <div class="section-line">
+        <span class="section-label">Nuestra trayectoria</span>
+        <h2>Cómo llegamos hasta aquí</h2>
+    </div>
+
+    <!-- Contenedor principal compacto de la línea -->
+    <div class="timeline-container">
+        
+        <!-- Línea vertical continua centradita -->
+        <div class="timeline-line"></div>
+
+        <!-- 2019 (Abre a la izquierda) -->
+        <div class="timeline-item item-left" onclick="toggleTooltip(this)">
+            <div class="timeline-badge">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <div class="timeline-year">2019</div>
+            <div class="tl-tooltip">
+                <h3>El origen</h3>
+                <p>Nace Tres Sesenta como un proyecto de análisis de datos y monitoreo de métricas en Nuevo León, sentando las bases de la comunicación estratégica digital.</p>
+            </div>
         </div>
 
-        <div class="timeline" id="timeline">
-            
-            <!-- 2019 -->
-            <div class="tl-item">
-                <div class="tl-empty"></div>
-                <div class="tl-center">
-                    <div class="tl-dot"><i class="fas fa-seedling"></i></div>
-                    <div class="tl-year">2019</div>
-                </div>
-                <div class="tl-content">
-                    <h3>El origen</h3>
-                    <p>Nace Tres Sesenta como un proyecto de análisis de datos y monitoreo de métricas en Nuevo León, sentando las bases de la comunicación estratégica digital.</p>
-                </div>
+        <!-- 2021 (Abre a la derecha) -->
+        <div class="timeline-item item-right" onclick="toggleTooltip(this)">
+            <div class="timeline-badge">
+                <i class="fas fa-chart-line"></i>
             </div>
-
-            <!-- 2021 -->
-            <div class="tl-item">
-                <div class="tl-content">
-                    <h3>Expansión Tamaulipas</h3>
-                    <p>Iniciamos operaciones en Aldama, Tamaulipas, especializándonos en gestión de difusión como medio digital e interacción positiva con audiencias clave.</p>
-                </div>
-                <div class="tl-center">
-                    <div class="tl-dot"><i class="fas fa-chart-line"></i></div>
-                    <div class="tl-year">2021</div>
-                </div>
-                <div class="tl-empty"></div>
+            <div class="timeline-year">2021</div>
+            <div class="tl-tooltip">
+                <h3>Expansión Tamaulipas</h3>
+                <p>Iniciamos operaciones en Aldama, Tamaulipas, especializándonos en gestión de difusión como medio digital e interacción positiva con audiencias clave.</p>
             </div>
-
-            <!-- 2022 -->
-            <div class="tl-item">
-                <div class="tl-empty"></div>
-                <div class="tl-center">
-                    <div class="tl-dot"><i class="fas fa-bullhorn"></i></div>
-                    <div class="tl-year">2022</div>
-                </div>
-                <div class="tl-content">
-                    <h3>Alianza estratégica</h3>
-                    <p>Consolidamos alianzas con municipios de Tamaulipas para difusión de programas sociales, reactivación económica y promoción turística local.</p>
-                </div>
-            </div>
-
-            <!-- 2023 -->
-            <div class="tl-item">
-                <div class="tl-content">
-                    <h3>Alta disponibilidad</h3>
-                    <p>Implementamos infraestructura de comunicación con 128 canales simultáneos, blindaje y rotación, alcanzando cobertura en todo el noreste de México.</p>
-                </div>
-                <div class="tl-center">
-                    <div class="tl-dot"><i class="fas fa-bolt"></i></div>
-                    <div class="tl-year">2023</div>
-                </div>
-                <div class="tl-empty"></div>
-            </div>
-
-            <!-- 2024 -->
-            <div class="tl-item">
-                <div class="tl-empty"></div>
-                <div class="tl-center">
-                    <div class="tl-dot"><i class="fas fa-city"></i></div>
-                    <div class="tl-year">2024</div>
-                </div>
-                <div class="tl-content">
-                    <h3>Consultoría 360°</h3>
-                    <p>Consolidamos proyectos en Tampico, Cd. Victoria y Norte de Veracruz: campañas digitales, gestión institucional, eventos culturales y desarrollo comunitario.</p>
-                </div>
-            </div>
-
-            <!-- 2025 -->
-            <div class="tl-item">
-                <div class="tl-content">
-                    <h3>Liderazgo regional</h3>
-                    <p>Nos convertimos en referentes del Golfo de México con más de 200 proyectos exitosos, integrando inteligencia artificial y automatización de contenidos.</p>
-                </div>
-                <div class="tl-center">
-                    <div class="tl-dot"><i class="fas fa-trophy"></i></div>
-                    <div class="tl-year">2025</div>
-                </div>
-                <div class="tl-empty"></div>
-            </div>
-
-            <!-- 2026 -->
-            <div class="tl-item">
-                <div class="tl-empty"></div>
-                <div class="tl-center">
-                    <div class="tl-dot"><i class="fas fa-rocket"></i></div>
-                    <div class="tl-year">2026</div>
-                </div>
-                <div class="tl-content">
-                    <h3>Trasciende con nosotros</h3>
-                    <p>Seguimos evolucionando: nuevas tecnologías, mayor alcance nacional y el compromiso de siempre: medir para mejorar. ¡Forma parte de nuestro próximo capítulo!</p>
-                </div>
-            </div>
-
         </div>
-    </section>
+
+        <!-- 2022 (Abre a la izquierda) -->
+        <div class="timeline-item item-left" onclick="toggleTooltip(this)">
+            <div class="timeline-badge">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="timeline-year">2022</div>
+            <div class="tl-tooltip">
+                <h3>Alianza estratégica</h3>
+                <p>Consolidamos alianzas con municipios de Tamaulipas para difusión de programas sociales, reactivación económica y promoción turística local.</p>
+            </div>
+        </div>
+
+        <!-- 2023 (Abre a la derecha) -->
+        <div class="timeline-item item-right" onclick="toggleTooltip(this)">
+            <div class="timeline-badge">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <div class="timeline-year">2023</div>
+            <div class="tl-tooltip">
+                <h3>Alta disponibilidad</h3>
+                <p>Implementamos infraestructura de comunicación con 128 canales simultáneos, blindaje y rotación, alcanzando cobertura en todo el noreste de México.</p>
+            </div>
+        </div>
+
+        <!-- 2024 (Abre a la izquierda) -->
+        <div class="timeline-item item-left" onclick="toggleTooltip(this)">
+            <div class="timeline-badge">
+                <i class="fas fa-city"></i>
+            </div>
+            <div class="timeline-year">2024</div>
+            <div class="tl-tooltip">
+                <h3>Consultoría 360°</h3>
+                <p>Consolidamos proyectos en Tampico, Cd. Victoria y Norte de Veracruz: campañas digitales, gestión institucional, eventos culturales y desarrollo comunitario.</p>
+            </div>
+        </div>
+
+        <!-- 2025 (Abre a la derecha) -->
+        <div class="timeline-item item-right" onclick="toggleTooltip(this)">
+            <div class="timeline-badge">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="timeline-year">2025</div>
+            <div class="tl-tooltip">
+                <h3>Liderazgo regional</h3>
+                <p>Nos convertimos en referentes del Golfo de México con más de 200 proyectos exitosos, integrando inteligencia artificial y automatización de contenidos.</p>
+            </div>
+        </div>
+
+        <!-- 2026 (Abre a la izquierda) -->
+        <div class="timeline-item item-left" onclick="toggleTooltip(this)">
+            <div class="timeline-badge">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <div class="timeline-year">2026</div>
+            <div class="tl-tooltip">
+                <h3>Trasciende con nosotros</h3>
+                <p>Seguimos evolucionando: nuevas tecnologías, mayor alcance nacional y el compromiso de siempre: medir para mejorar. ¡Forma parte de nuestro próximo capítulo!</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Enlace a tu script al final -->
+<script src="js/nosotros.js"></script>
 
     <!-- ══════════════════════════════════════
          VALORES / ADN DE LA EMPRESA

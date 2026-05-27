@@ -285,7 +285,7 @@ border-top: 1px solid rgba(221,1,192,0.3);
     background: rgba(220,0,133,0.15);
     display: inline-block;
     padding: 4px 12px;
-    border-radius: 30px;
+    border-radius: 3px;
 }
 
 .tl-content {
@@ -683,4 +683,201 @@ border-top: 1px solid rgba(221,1,192,0.3);
   }
 }
 
+/* ============================================================
+   LÍNEA DE TIEMPO TOTALMENTE CENTRADA Y ALTERNA (COMPACTA)
+   ============================================================ */
 
+.historia-section {
+    padding: 60px 20px;
+    background-color: #0a0a0a; 
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden; /* Evita scrolls raros de lado a lado */
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 700px;
+    margin: 30px auto 0 auto;
+    padding: 10px 0;
+}
+
+/* La línea vertical siempre estará fija en el centro absoluto (50%) */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent, #dd01c0 15%, #ff5ec6 50%, #dd01c0 85%, transparent);
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(221, 1, 192, 0.4);
+}
+
+/* Contenedor del ítem */
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px; /* Súper juntitos para evitar scroll largo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    height: 60px;
+}
+
+/* Círculos con tus iconos y colores corporativos */
+.timeline-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dd01c0, #ff5ec6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border: 3px solid #0a0a0a;
+    box-shadow: 0 0 0 4px rgba(221, 1, 192, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 5;
+}
+
+/* Años dinámicos que se adaptan al lado opuesto del cuadro de texto */
+.timeline-year {
+    position: absolute;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ff5ec6;
+    background: rgba(221, 1, 192, 0.15);
+    padding: 3px 10px;
+    border-radius: 4px;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+/* Si el cuadro abre a la izquierda, el año va a la derecha */
+.item-left .timeline-year { left: calc(50% + 40px); }
+
+/* Si el cuadro abre a la derecha, el año va a la izquierda */
+.item-right .timeline-year { right: calc(50% + 40px); }
+
+
+/* ============================================================
+   DISEÑO DE LAS BURBUJAS DE TEXTO INTERACTIVAS (TOOLTIPS)
+   ============================================================ */
+.tl-tooltip {
+    position: absolute;
+    background-color: #0d0d13;
+    border: 1.5px solid #dd01c0;
+    padding: 12px 16px;
+    border-radius: 14px;
+    width: 220px; /* Tamaño ideal balanceado para pantallas móviles y PC */
+    box-shadow: 0 8px 25px rgba(221, 1, 192, 0.3);
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%) scale(0.85);
+    
+    /* Ocultos por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 10;
+}
+
+/* Flechas conectoras */
+.tl-tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 7px solid transparent;
+}
+
+/* Posición Izquierda */
+.item-left .tl-tooltip { right: calc(50% + 40px); }
+.item-left .tl-tooltip::before {
+    right: -14px;
+    border-left-color: #dd01c0;
+}
+
+/* Posición Derecha */
+.item-right .tl-tooltip { left: calc(50% + 40px); }
+.item-right .tl-tooltip::before {
+    left: -14px;
+    border-right-color: #dd01c0;
+}
+
+/* Textos dentro del cuadro */
+.tl-tooltip h3 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.tl-tooltip p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   DISPARADORES INTERACTIVOS (HOVER Y CLICK EFECTO)
+   ============================================================ */
+
+/* Al pasar el mouse O dar clic, ocultamos el año correspondiente y mostramos el texto */
+.timeline-item:hover .tl-tooltip,
+.timeline-item.active-click .tl-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1);
+}
+
+.timeline-item:hover .timeline-year,
+.timeline-item.active-click .timeline-year {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.timeline-item:hover .timeline-badge,
+.timeline-item.active-click .timeline-badge {
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(221, 1, 192, 0.6);
+}
+
+
+/* ============================================================
+   📱 RESPONSIVO MEJORADO: FUERZA EL CENTRO EN CUALQUIER MÓVIL
+   ============================================================ */
+@media (max-width: 600px) {
+    .timeline-container {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Mantiene la línea exactamente en el centro */
+    .timeline-line {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .timeline-item {
+        justify-content: center !important;
+    }
+
+    /* Reducimos un poco el tamaño de las burbujas en celular para que no se corten */
+    .tl-tooltip {
+        width: 145px; 
+        padding: 10px;
+    }
+
+    .item-left .tl-tooltip { right: calc(50% + 35px); }
+    .item-right .tl-tooltip { left: calc(50% + 35px); }
+
+    .item-left .timeline-year { left: calc(50% + 35px); }
+    .item-right .timeline-year { right: calc(50% + 35px); }
+}
