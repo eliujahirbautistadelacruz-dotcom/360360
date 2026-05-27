@@ -294,7 +294,6 @@
   display: inline-block;
   margin-left: 0.3rem;
 }
-
 .card-teaser {
   font-size: 0.85rem;
   line-height: 1.5;
@@ -302,6 +301,7 @@
   margin: 0 0 0.5rem 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2; /* 👈 AGREGA ESTA LÍNEA AQUÍ */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

@@ -214,7 +214,7 @@
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-primario, #000));
+    color: var(--color-primario, #000);
     background: rgba(221, 1, 192, 0.12);
     padding: 5px 16px;
     border-radius: 30px;
