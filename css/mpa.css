@@ -79,7 +79,7 @@
 .cuadrados-container {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 0px;
   margin: 40px auto 20px;
   flex-wrap: wrap;
 }

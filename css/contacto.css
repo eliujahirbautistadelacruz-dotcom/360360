@@ -493,9 +493,10 @@
 }
 
 .map-container {
-    border-radius: 20px;
+    border-radius: 0px;
     overflow: hidden;
     background: var(--bg-card);
+    background-color:#000
 }
 
 .map-container iframe {

@@ -6,34 +6,7 @@
 
 (function() {
     'use strict';
-    
-    // SOLO 3 ESTADOS donde la empresa tiene presencia (sedes principales)
-    const estadosConPresencia = [
-        { 
-            nombre: 'Nuevo León', 
-            x: 470, 
-            y: 265, 
-            proyectos: 45, 
-            anio: 2019, 
-            descripcion: '⭐ Sede principal - Mayor operación' 
-        },
-        { 
-            nombre: 'Tamaulipas', 
-            x: 555, 
-            y: 270, 
-            proyectos: 38, 
-            anio: 2021, 
-            descripcion: '⭐ Segunda sede - Fuerte presencia' 
-        },
-        { 
-            nombre: 'Veracruz', 
-            x: 670, 
-            y: 440, 
-            proyectos: 25, 
-            anio: 2022, 
-            descripcion: '⭐ Tercera sede - Expansión constante' 
-        }
-    ];
+   
     
     // Información de cada estado para tooltips
     const infoEstados = {

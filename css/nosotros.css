@@ -4,6 +4,7 @@
    ============================================================ */
 
 /* -- VARIABLES GLOBALES (heredadas de styles.css, pero definidas por si acaso) -- */
+
 :root {
     --color-primario: #dd01c0;
     --color-gris-oscuro: #1a1a2e;
@@ -501,7 +502,7 @@ border-top: 1px solid rgba(221,1,192,0.3);
 
 /* -- PREMISA / CTA FINAL -- */
 .premisa-section {
-    padding: 100px 8%;
+    padding: 1px 8%;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a0012 50%, #0d0008 100%);
     text-align: center;
     position: relative;
