@@ -45,7 +45,7 @@
             <img src="img/logo.png" alt="Logo de Tres Sesenta Consultoría" class="logo-img">
             <div class="brand-text">
                 <h1>TRES SESENTA CONSULTORÍA, S.A. DE C.V.</h1>
-                <p><i>Lo que se mide, se puede mejorar.</i></p>
+                <p class="brand-slogan">Lo que se mide, se puede mejorar.</p>
             </div>
         </div>
         
@@ -56,10 +56,10 @@
         <nav class="nav-menu" id="nav-list">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="cata2.html">Servicios</a></li>
-            <li><a href="localizaciones.html">Localizaciones</a></li>
-            <li><a href="contacto.html">contáctanos</a></li>               
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="cata2.html">Servicios</a></li>
+                <li><a href="localizaciones.html">Localizaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>               
             </ul>
         </nav>
     </header>
@@ -71,15 +71,15 @@
             Tu navegador no soporta la reproducción de video.
         </video>
         <div class="hero-overlay">
-            <h1><b>LO QUE SE MIDE,<br> SE PUEDE MEJORAR.</b></h1>
-            <p>tres sesenta consultoría, <br> S.A. de C.V.</p>
+            <h1 class="hero-title">LO QUE SE MIDE,<br> SE PUEDE MEJORAR.</h1>
+            <p class="hero-subtitle">Tres Sesenta Consultoría, <br> S.A. de C.V.</p>
         </div>
     </section>
     
     <!-- Sección de servicios/beneficios -->
     <section class="hero2" id="servicios">
         <div class="text">
-            <p class="subti">elíge a tres sesenta consultoría por...</p>
+            <p class="subti">Elíge a Tres Sesenta Consultoría por...</p>
             <h1>EL PODER DE LA ESTRATEGIA:</h1>
             
             <ul class="features-list">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="feature-content">
                         <span class="feature-title">Respuesta Inmediata:</span>
-                        <p class="feature-desc">analizamos cada escenario con visión 360° para optimizar sus recursos y actuar con precisión quirúrgica en tiempo real.</p>
+                        <p class="feature-desc">Analizamos cada escenario con visión 360° para optimizar sus recursos y actuar con precisión quirúrgica en tiempo real.</p>
                     </div>
                 </li>
                 <li class="feature-item">
@@ -98,7 +98,7 @@
                     </div>
                     <div class="feature-content">
                         <span class="feature-title">Resultados Garantizados:</span>
-                        <p class="feature-desc">cada movimiento lo realizamos con personal altamente calificado.</p>
+                        <p class="feature-desc">Cada movimiento lo realizamos con personal altamente calificado.</p>
                     </div>
                 </li>
                 <li class="feature-item">
@@ -107,22 +107,20 @@
                     </div>
                     <div class="feature-content">
                         <span class="feature-title">Nuestra Premisa:</span>
-                        <p class="feature-desc">lo que se mide, se puede mejorar.</p>
+                        <p class="feature-desc">Lo que se mide, se puede mejorar.</p>
                     </div>
                 </li>
             </ul>
             
-    <a href="contacto.html" class="btn-estrategia">HABLEMOS DE TU PROYECTO →</a>
+            <a href="contacto.html" class="btn-estrategia">HABLEMOS DE TU PROYECTO →</a>
         </div> 
         <div class="image">
             <img src="img/gt.png" alt="Estrategia de marketing y consultoría">
-            <div class="badge">+8<br><span>Años de experiencia</span></div>
+            <div class="badge">+8<br><span>Anños de experiencia</span></div>
         </div>
     </section>
 
-    <!-- ============================================================
-         SECCIÓN DE VALORES - CON ICONOS CORREGIDOS (TODOS FUNCIONAN)
-         ============================================================ -->
+    <!-- Sección de Valores -->
     <section class="valores-section">
         <div class="valores-container">
             <p class="valores-subtitulo">NUESTRO COMPROMISO</p>
@@ -147,7 +145,7 @@
                     <p>Actuamos con agilidad para aprovechar cada oportunidad</p>
                 </div>
                 
-                <!-- Tarjeta 3 - Datos que Impulsan (CORREGIDO) -->
+                <!-- Tarjeta 3 - Datos que Impulsan -->
                 <div class="valor-card">
                     <div class="valor-icon">
                         <i class="fas fa-chart-line"></i>
@@ -156,7 +154,7 @@
                     <p>Decisiones basadas en métricas, no en corazonadas</p>
                 </div>
                 
-                <!-- Tarjeta 4 - Confidencialidad (CORREGIDO) -->
+                <!-- Tarjeta 4 - Confidencialidad -->
                 <div class="valor-card">
                     <div class="valor-icon">
                         <i class="fas fa-lock"></i>
@@ -180,8 +178,7 @@
                 <img src="img/logo.png" alt="Logo de Tres Sesenta Consultoría" class="logo-imgg">
                 <p>Tres Sesenta Consultoría, S.A. De C.V.</p>
             </div>
-            <br>
-            <p><em>Lo que se mide, se puede mejorar.</em></p>
+            <p class="footer-slogan">Lo que se mide, se puede mejorar.</p>
             <div class="footer-social">
                 <a href="https://facebook.com/tu_pagina" class="social-icon fb" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook-f"></i>
@@ -196,57 +193,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        (function () {
-            'use strict';
-
-            /* Scroll progress bar */
-            const progressBar = document.createElement('div');
-            progressBar.className = 'scroll-progress';
-            document.body.prepend(progressBar);
-
-            /* Mobile hamburger */
-            const toggle = document.getElementById('mobile-menu');
-            const navList = document.getElementById('nav-list');
-            const navbar = document.querySelector('.navbar');
-
-            if (toggle && navList) {
-                toggle.addEventListener('click', () => {
-                    const isOpen = navList.classList.toggle('active');
-                    toggle.classList.toggle('open', isOpen);
-                    toggle.setAttribute('aria-expanded', isOpen);
-                });
-
-                navList.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navList.classList.remove('active');
-                        toggle.classList.remove('open');
-                        toggle.setAttribute('aria-expanded', 'false');
-                    });
-                });
-
-                document.addEventListener('click', (e) => {
-                    if (navbar && !navbar.contains(e.target)) {
-                        navList.classList.remove('active');
-                        toggle.classList.remove('open');
-                        toggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            }
-
-            /* Scroll effects */
-            function onScroll() {
-                const scrolled = window.scrollY;
-                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const progress = docHeight > 0 ? (scrolled / docHeight) * 100 : 0;
-                if (progressBar) progressBar.style.width = progress + '%';
-                if (navbar) navbar.classList.toggle('scrolled', scrolled > 60);
-            }
-
-            window.addEventListener('scroll', onScroll, { passive: true });
-            onScroll();
-        })();
-    </script>
+    <!-- Enlace al JavaScript externo (Limpio y ordenado) -->
+    <script src="js/index.js"></script>
 </body>
 </html>
