@@ -406,7 +406,7 @@ body {
 }
 
 .hero2 .subti {
-  font-size: 0.8rem;
+  font-size: 1.22rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -478,7 +478,7 @@ body {
 .feature-title {
   font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.70rem;
   color: #1a1a2c;
   display: block;
   margin-bottom: 6px;
@@ -486,7 +486,7 @@ body {
 }
 
 .feature-desc {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: #5a5a6e;
   margin: 0;
