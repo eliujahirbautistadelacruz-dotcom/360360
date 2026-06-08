@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="description" content="Catálogo de casetas móviles - Mobile Booths S.A. de C.V. - Venta y renta de oficinas móviles, sanitarios y remolques">
+    <title>Catálogo | Mobile Booths S.A. de C.V.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="icon" href="images/1.png" type="image/png">
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+    <div class="ticker-track">
+        <span><i class="fas fa-industry"></i> SOMOS FABRICANTES</span>
+        <span><i class="fas fa-boxes-stacked"></i> CATÁLOGO 2026</span>
+        <span><i class="fas fa-truck-fast"></i> ENTREGAS EN TODA LA REPÚBLICA</span>
+        <span><i class="fas fa-wrench"></i> MANTENIMIENTO GRATUITO EN RENTA</span>
+        <span><i class="fas fa-phone"></i> 833 324 4188</span>
+        <span><i class="fas fa-industry"></i> SOMOS FABRICANTES</span>
+        <span><i class="fas fa-boxes-stacked"></i> CATÁLOGO 2026</span>
+        <span><i class="fas fa-truck-fast"></i> ENTREGAS EN TODA LA REPÚBLICA</span>
+        <span><i class="fas fa-wrench"></i> MANTENIMIENTO GRATUITO EN RENTA</span>
+        <span><i class="fas fa-phone"></i> 833 324 4188</span>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="mainNavbar">
+    <div class="brand-container">
+        <img src="images/logo.png" alt="Logo Mobile Booths" class="logo-img">
+    </div>
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span><span></span><span></span>
+    </div>
+    <nav class="nav-menu" id="nav-list">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html" class="active">Catálogo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO CATÁLOGO -->
+<section class="catalog-hero">
+    <video autoplay muted loop id="bg-video-catalog" playsinline webkit-playsinline>
+        <source src="images/caseta1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay-catalog"></div>
+
+ 
+
+    <div class="hero-inner" data-aos="fade-up">
+        <div class="hero-eyebrow">
+            <i class="fas fa-boxes-stacked"></i>
+            CATÁLOGO COMPLETO 2026
+        </div>
+        <h1>TU <span>ESPACIO,</span><br>EN CUALQUIER LUGAR</h1>
+        <p>Oficinas móviles, sanitarios y remolques de alta calidad. Fabricación propia, renta y venta con mantenimiento incluido.</p>
+    </div>
+</section>
+
+<!-- BANNER PROMO — CATÁLOGO -->
+<section class="promo-banner" style="margin-bottom: 0;">
+    <div class="promo-banner-inner">
+        <div class="promo-text-panel" style="padding: 44px 50px;">
+            <span class="promo-badge"><i class="fas fa-tag"></i> RENTA Y VENTA DISPONIBLE</span>
+            <h2>Cotización <span>sin costo</span></h2>
+            <p>Elige el modelo que necesitas y recibe tu cotización personalizada en menos de 24 horas. Incluye diseño 3D y asesoría técnica.</p>
+            <div class="promo-btns">
+                <a href="contacto.html" class="btn-primary">
+                    <i class="fas fa-file-invoice-dollar"></i> Solicitar Cotización
+                </a>
+                
+            </div>
+        </div>
+        <section class="cata">
+        <div class="promo-visual-panel">
+            <img src="images/img2.png" alt="Casetas Mobile Booths">
+            <div class="promo-visual-overlay"></div>
+            <div class="promo-visual-stat">
+                <span class="big">7</span>
+                <small>MODELOS DISPONIBLES</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CATÁLOGO MAIN -->
+<main class="catalog-main">
+    <div class="filter-bar" data-aos="fade-up">
+        <div class="filter-pills" id="filterPills">
+            <button class="filter-pill active" data-filter="all">🏗️ TODO</button>
+            <button class="filter-pill" data-filter="oficina">🏢 OFICINA</button>
+            <button class="filter-pill" data-filter="habitacional">🏠 HABITACIONAL</button>
+            <button class="filter-pill" data-filter="vigilancia">👮 VIGILANCIA</button>
+            <button class="filter-pill" data-filter="sanitario">🚿 SANITARIOS</button>
+            <button class="filter-pill" data-filter="remolque">🚛 REMOLQUES</button>
+            <button class="filter-pill" data-filter="personalizar">🎨 PERSONALIZA</button>
+        </div>
+        <div class="counter-tag">
+            <strong id="productCount">7</strong> productos disponibles
+        </div>
+    </div>
+
+    <!-- Grid de productos (visible normalmente) -->
+    <div class="catalog-grid" id="catalogGrid" data-aos="fade-up"></div>
+
+    <!-- Sección de personalización (oculta por defecto) -->
+    <div class="personalizacion-section" id="personalizacionSection" style="display: none;">
+        <div class="personalizacion-header" data-aos="fade-up">
+            <div class="personalizacion-icon">
+                <i class="fas fa-paintbrush-tip"></i>
+            </div>
+            <h2>Personaliza tu caseta</h2>
+            <p>Crea la solución perfecta para tu proyecto. Cotización en 24h.</p>
+        </div>
+
+        <div class="personalizacion-form-container" data-aos="fade-up">
+            <form id="personalizeFormCatalog" class="personalizacion-form" method="POST">
+                <!-- PASO 1: Tipo de Caseta -->
+                <div class="form-step-catalog">
+                    <div class="step-indicator-catalog">
+                        <span class="step-badge-catalog active">1</span>
+                        <span class="step-line-catalog"></span>
+                        <span class="step-badge-catalog">2</span>
+                        <span class="step-line-catalog"></span>
+                        <span class="step-badge-catalog">3</span>
+                    </div>
+                    
+                    <div class="form-section-catalog active" id="catalogStep1">
+                        <h3><i class="fas fa-building"></i> Tipo de Caseta</h3>
+                        <div class="options-grid-catalog">
+                            <label class="option-card-catalog" data-type="oficina">
+                                <input type="radio" name="tipoPersonalizado" value="oficina" hidden>
+                                <div class="option-icon-catalog"><i class="fas fa-building"></i></div>
+                                <div class="option-title-catalog">Oficina</div>
+                                <div class="option-desc-catalog">Espacios de trabajo, juntas y operaciones</div>
+                            </label>
+                            <label class="option-card-catalog" data-type="habitacional">
+                                <input type="radio" name="tipoPersonalizado" value="habitacional" hidden>
+                                <div class="option-icon-catalog"><i class="fas fa-home"></i></div>
+                                <div class="option-title-catalog">Habitacional</div>
+                                <div class="option-desc-catalog">Dormitorios, comedor, descanso</div>
+                            </label>
+                            <label class="option-card-catalog" data-type="vigilancia">
+                                <input type="radio" name="tipoPersonalizado" value="vigilancia" hidden>
+                                <div class="option-icon-catalog"><i class="fas fa-shield-alt"></i></div>
+                                <div class="option-title-catalog">Vigilancia</div>
+                                <div class="option-desc-catalog">Caseta de seguridad y control</div>
+                            </label>
+                            <label class="option-card-catalog" data-type="sanitario">
+                                <input type="radio" name="tipoPersonalizado" value="sanitario" hidden>
+                                <div class="option-icon-catalog"><i class="fas fa-toilet"></i></div>
+                                <div class="option-title-catalog">Sanitario</div>
+                                <div class="option-desc-catalog">Baños portátiles completos</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section-catalog" id="catalogStep2">
+                        <h3><i class="fas fa-ruler-combined"></i> Especificaciones</h3>
+                        <div class="specs-grid-catalog">
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-arrows-alt-h"></i> Medida (pies)</label>
+                                <select name="medidaPersonalizada" id="medidaSelectCatalog">
+                                    <option value="">Selecciona una medida</option>
+                                    <option value="12FT">12 FT (4m × 2.5m)</option>
+                                    <option value="17FT">17 FT (5m × 2.5m)</option>
+                                    <option value="24FT">24 FT (6m × 2.5m)</option>
+                                    <option value="32FT">32 FT (8m × 2.5m)</option>
+                                    <option value="45FT">45 FT (13m × 2.5m)</option>
+                                </select>
+                            </div>
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-users"></i> Capacidad (personas)</label>
+                                <select name="capacidadPersonalizada">
+                                    <option value="">Selecciona capacidad</option>
+                                    <option value="2-4">2-4 personas</option>
+                                    <option value="5-8">5-8 personas</option>
+                                    <option value="9-12">9-12 personas</option>
+                                    <option value="13-15">13-15 personas</option>
+                                    <option value="15+">Más de 15 personas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="specs-grid-catalog">
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-chair"></i> Mobiliario incluido</label>
+                                <div class="checkbox-group-catalog">
+                                    <label><input type="checkbox" name="mobiliarioPersonalizado" value="escritorios"> Escritorios</label>
+                                    <label><input type="checkbox" name="mobiliarioPersonalizado" value="sillas"> Sillas</label>
+                                    <label><input type="checkbox" name="mobiliarioPersonalizado" value="repisas"> Repisas / Estantes</label>
+                                    <label><input type="checkbox" name="mobiliarioPersonalizado" value="archivero"> Archivero</label>
+                                </div>
+                            </div>
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-plug"></i> Equipamiento adicional</label>
+                                <div class="checkbox-group-catalog">
+                                    <label><input type="checkbox" name="equipoPersonalizado" value="aire"> Aire Acondicionado</label>
+                                    <label><input type="checkbox" name="equipoPersonalizado" value="calefaccion"> Calefacción</label>
+                                    <label><input type="checkbox" name="equipoPersonalizado" value="planta"> Planta Eléctrica</label>
+                                    <label><input type="checkbox" name="equipoPersonalizado" value="internet"> Internet Satelital</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specs-grid-catalog">
+                            <div class="input-group-catalog full-width">
+                                <label><i class="fas fa-paint-roller"></i> Acabados especiales</label>
+                                <textarea name="acabadosPersonalizado" rows="2" placeholder="Describe colores, materiales o acabados personalizados..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section-catalog" id="catalogStep3">
+                        <h3><i class="fas fa-user-check"></i> Tus datos</h3>
+                        <div class="contact-grid-catalog">
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-user"></i> Nombre completo *</label>
+                                <input type="text" name="nombrePersonalizado" required placeholder="Ej: Juan Pérez">
+                            </div>
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-building"></i> Empresa / Proyecto</label>
+                                <input type="text" name="empresaPersonalizada" placeholder="Nombre de tu empresa o proyecto">
+                            </div>
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-phone"></i> Teléfono *</label>
+                                <input type="tel" name="telefonoPersonalizado" required placeholder="Ej: 833 324 4188">
+                            </div>
+                            <div class="input-group-catalog">
+                                <label><i class="fas fa-envelope"></i> Correo electrónico *</label>
+                                <input type="email" name="emailPersonalizado" required placeholder="tu@correo.com">
+                            </div>
+                            <div class="input-group-catalog full-width">
+                                <label><i class="fas fa-map-marker-alt"></i> Ubicación del proyecto</label>
+                                <input type="text" name="ubicacionPersonalizada" placeholder="Ciudad, Estado">
+                            </div>
+                            <div class="input-group-catalog full-width">
+                                <label><i class="fas fa-calendar-alt"></i> Fecha requerida</label>
+                                <input type="date" name="fechaPersonalizada">
+                            </div>
+                            <div class="input-group-catalog full-width">
+                                <label><i class="fas fa-comment-dots"></i> Notas adicionales</label>
+                                <textarea name="notasPersonalizado" rows="2" placeholder="¿Necesitas algo específico? Cuéntanos..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation-catalog">
+                        <button type="button" class="nav-btn-catalog prev-btn-catalog" id="prevStepCatalogBtn" disabled>
+                            <i class="fas fa-arrow-left"></i> Anterior
+                        </button>
+                        <button type="button" class="nav-btn-catalog next-btn-catalog" id="nextStepCatalogBtn">
+                            Siguiente <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="submit" class="nav-btn-catalog submit-btn-catalog" id="submitFormCatalogBtn" style="display: none;">
+                            <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="personalizacion-footer">
+                <p><i class="fas fa-clock"></i> Cotización en menos de 24 horas</p>
+                <p><i class="fas fa-check-circle"></i> Asesoría personalizada sin costo</p>
+                <p><i class="fas fa-truck"></i> Entregas en toda la República</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- MODAL PRODUCTO -->
+<div id="infoModal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">&times;</button>
+        <div class="modal-body">
+            <div class="modal-img-side">
+                <div id="sliderTrack" class="slider-track"></div>
+                <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Anterior">&#10094;</button>
+                <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Siguiente">&#10095;</button>
+                <div id="sliderDots" class="slider-dots"></div>
+            </div>
+            <div class="modal-txt-side">
+                <h2 id="modalTitle" class="modal-product-title"></h2>
+                <p id="modalSub" class="modal-product-sub"></p>
+                <div id="specsContainer"></div>
+                <a href="contacto.html" class="cotizar-btn">
+                    <i class="fas fa-file-invoice-dollar"></i> SOLICITAR COTIZACIÓN
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/528333244188" class="wpp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+    <span>¡COTIZA AQUÍ!</span>
+</a>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="images/Logo - 360.png" alt="Logo 360" class="logo-imgg">
+            <p>La calidad nos distingue.</p>
+            <p class="texto-cursivo">SOMOS FABRICANTES</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=100066891784108" class="social-icon" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+         
+                </a>
+                <a href="https://wa.me/528333244188" class="social-icon" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mobile Booths S.A. De C.V. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/catalogo.js"></script>
+<script>
+    (function() {
+        const bgVideo = document.getElementById('bg-video-catalog');
+        if (bgVideo && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            bgVideo.setAttribute('playsinline', 'true');
+            bgVideo.setAttribute('webkit-playsinline', 'true');
+            bgVideo.play().catch(e => console.log('Video autoplay falló:', e));
+        }
+    })();
+    
+    // Inicializar EmailJS (debes registrarte en emailjs.com)
+    
+</script>
+</body>
+</html>
