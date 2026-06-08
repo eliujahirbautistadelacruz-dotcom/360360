@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos — Tres Sesenta Consultoría</title>
+
+<link rel="stylesheet" href="css/localizaciones.css" />
+<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/cata2.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/hero2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+ <!-- ══════════════════════════════════════
+         NAVBAR
+         ══════════════════════════════════════ -->
+    <header class="navbar">
+    <div class="brand-container">
+        <img src="img/logo.png" alt="Logo" class="logo-img">
+        <div class="brand-text">
+           <h1>TRES SESENTA CONSULTORÍA, S.A. DE C.V.</h1>
+            
+            <p><i>Lo que se mide, se puede mejorar.</i></p>
+        </div>
+    </div>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span><span></span><span></span>
+    </div>
+
+    <nav class="nav-menu" id="nav-list">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="cata2.html">Servicios</a></li>
+            <li><a href="localizaciones.html">Localizaciones</a></li>
+            <li><a href="contacto.html">contáctanos</a></li>                
+        </ul>
+    </nav>
+</header>
+
+<div class="loc-page">
+
+  <!-- HERO -->
+  <section class="loc-hero">
+
+    <div class="loc-hero-content">
+
+      <div class="loc-eyebrow">
+        <span class="loc-dot-pulse"></span>
+        Cobertura nacional
+      </div>
+
+      <h1 class="loc-h1">
+        Localizaciones <em>en toda la República</em>
+      </h1>
+
+      <p class="loc-lead">
+        Capacidad de reacciones por minuto (RPM) desplegada
+        estratégicamente en múltiples estados de México.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+  <div class="loc-stats" id="loc-stats"></div>
+
+  <!-- CHART -->
+  <section class="loc-chart-section">
+
+    <header class="loc-section-header">
+
+      <span class="loc-section-eyebrow">
+        Distribución por estado
+      </span>
+
+      <h2 class="loc-h2">
+        RPM por localización
+      </h2>
+
+      <p class="loc-section-desc">
+        La longitud de cada barra representa la capacidad
+        de reacciones por minuto disponible en cada estado.
+      </p>
+
+    </header>
+
+    <div class="loc-chart-card" id="loc-chart-card">
+
+      <div class="loc-chart-toolbar">
+
+        <span class="loc-chart-title">
+          Catálogo de estados
+        </span>
+
+        <span class="loc-chart-legend">
+          <span class="loc-legend-swatch"></span>
+          Interacciones por minuto 
+        </span>
+
+      </div>
+
+      <div class="loc-chart-rows" id="loc-chart-rows"></div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script>
+
+(function () {
+
+  const RAW = [
+    { actor:"ANDRÉS MIJES", estado:"Nuevo León", rpm:3500 },
+    { actor:"CHUCHO NADER", estado:"Tamaulipas", rpm:3500 },
+    { actor:"ABELARDO IBARRA VILLANUEVA", estado:"Tamaulipas", rpm:2000 },
+    { actor:'CÉSAR "TRUKO" VERÁSTEGUI', estado:"Tamaulipas", rpm:2000 },
+    { actor:"PABLO BUSTAMANTE", estado:"Quintana Roo", rpm:2000 },
+    { actor:"PEDRO CEPEDA ANAYA", estado:"Tamaulipas", rpm:2000 },
+    { actor:"BALTA MARTINEZ RIOS", estado:"Nuevo León", rpm:2000 },
+    { actor:"JOSÉ FAYAD SEDEÑO", estado:"Hidalgo", rpm:2000 },
+    { actor:"PEPE BRAÑA", estado:"Tamaulipas", rpm:1000 },
+    { actor:"NAZARIO MARROQUIN VARGAS", estado:"Nuevo León", rpm:1000 },
+    { actor:"GLORIA GARZA", estado:"Tamaulipas", rpm:1000 },
+    { actor:"MONICA VILLARREAL", estado:"Tamaulipas", rpm:350 },
+    { actor:"ZONA METRO NORTE", estado:"Nuevo León", rpm:350 },
+    { actor:"MOBILE BOOTHS", estado:"Tamaulipas", rpm:350 },
+    { actor:"COLONIAS UNIDAS EN ACCIÓN", estado:"Tamaulipas", rpm:350 },
+    { actor:"OPINION DATA", estado:"N/A", rpm:350 }
+  ];
+
+  const grouped = {};
+
+  RAW.forEach(item => {
+
+    if (!grouped[item.estado]) {
+      grouped[item.estado] = 0;
+    }
+
+    grouped[item.estado] += item.rpm;
+
+  });
+
+  const STATES = Object.entries(grouped).map(([state, rpm]) => ({
+    state,
+    rpm
+  }));
+
+  const sorted = [...STATES].sort((a, b) => b.rpm - a.rpm);
+
+  const total = STATES.reduce((sum, item) => sum + item.rpm, 0);
+
+  const avg = Math.round(total / STATES.length);
+
+  const top = sorted[0];
+
+  const max = top.rpm;
+
+  const fmt = n => n.toLocaleString('es-MX');
+
+  /* STATS */
+
+  const stats = [
+    {
+      label: "Estados",
+      value: STATES.length,
+      sub: "Cobertura activa"
+    },
+    {
+      label: "RPM Total",
+      value: total,
+      sub: "Reacciones por minuto"
+    },
+    {
+      label: "Promedio",
+      value: avg,
+      sub: "RPM promedio"
+    },
+    {
+      label: "Top RPM",
+      value: top.rpm,
+      sub: top.state
+    }
+  ];
+
+  const statsEl = document.getElementById('loc-stats');
+
+  statsEl.innerHTML = stats.map((s, i) => `
+    <div class="loc-stat-card" style="transition-delay:${i * 90}ms">
+
+      <div class="loc-stat-label">
+        ${s.label}
+      </div>
+
+      <div class="loc-stat-value" data-target="${s.value}">
+        0
+      </div>
+
+      <div class="loc-stat-sub">
+        ${s.sub}
+      </div>
+
+    </div>
+  `).join('');
+
+  /* ROWS */
+
+  const rowsEl = document.getElementById('loc-chart-rows');
+
+  rowsEl.innerHTML = sorted.map((item, i) => {
+
+    const pct = (item.rpm / max) * 100;
+
+    const isTop = item.state === top.state;
+
+    return `
+      <div class="loc-bar-row ${isTop ? 'loc-top' : ''}"
+           style="transition-delay:${i * 40}ms">
+
+        <div class="loc-bar-state">
+          ${item.state}
+        </div>
+
+        <div class="loc-bar-track">
+
+          <div class="loc-bar-fill"
+               data-pct="${pct}"
+               style="transition-delay:${200 + i * 35}ms">
+          </div>
+
+        </div>
+
+        <div class="loc-bar-value">
+          ${fmt(item.rpm)}
+        </div>
+
+      </div>
+    `;
+  }).join('');
+
+  /* COUNTUP */
+
+  function countUp(el, end, dur = 1600) {
+
+    const start = performance.now();
+
+    function tick(now) {
+
+      const p = Math.min((now - start) / dur, 1);
+
+      const eased = 1 - Math.pow(1 - p, 3);
+
+      el.textContent = fmt(Math.round(end * eased));
+
+      if (p < 1) {
+        requestAnimationFrame(tick);
+      }
+
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  /* OBSERVER */
+
+  const io = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (!entry.isIntersecting) return;
+
+      const el = entry.target;
+
+      if (el.classList.contains('loc-stats')) {
+
+        el.querySelectorAll('.loc-stat-card').forEach(card => {
+
+          card.classList.add('loc-in');
+
+          const value = card.querySelector('.loc-stat-value');
+
+          countUp(value, +value.dataset.target);
+
+        });
+
+      }
+
+      if (el.id === 'loc-chart-card') {
+
+        el.querySelectorAll('.loc-bar-row').forEach(row => {
+          row.classList.add('loc-in');
+        });
+
+        el.querySelectorAll('.loc-bar-fill').forEach(fill => {
+          fill.style.width = fill.dataset.pct + '%';
+        });
+
+      }
+
+      io.unobserve(el);
+
+    });
+
+  }, {
+    threshold: 0.15
+  });
+
+  io.observe(statsEl);
+
+  io.observe(document.getElementById('loc-chart-card'));
+
+})();
+
+ /* ── Hamburguesa ── */
+        const toggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+        if (toggle && navList) {
+            toggle.addEventListener('click', () => navList.classList.toggle('active'));
+        }
+
+        /* ── Scroll Spy ── */
+        const sections = document.querySelectorAll('section[id], footer[id]');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        function activateLink() {
+            let current = null;
+            sections.forEach(section => {
+                // Adjust offset if necessary, e.g., to account for fixed header
+                if (window.pageYOffset >= section.offsetTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (current && link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', activateLink);
+
+</script>
+ <!-- Pie de página -->
+    <footer class="main-footer" id="contacto">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo empresa" class="logo-imgg">
+                <p> Tres Sesenta Consultoría, S.A. De C.V. </p>  </div>
+                <br>
+                <p><i>Lo que se mide, se puede mejorar.</p></i>
+                <div class="footer-social">
+   <a href="https://facebook.com/tu_pagina" class="social-icon fb">
+      <i class="fa-brands fa-facebook-f"></i>
+   </a> 
+   <a href="https://wa.me/528333244188" class="social-icon wpp">
+      <i class="fa-brands fa-whatsapp"></i>
+   </a>
+</div>
