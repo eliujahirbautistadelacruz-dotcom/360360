@@ -1,615 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-<<<<<<< HEAD
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <meta name="description" content="Mobile Booths S.A. de C.V. - Soluciones en unidades móviles, venta y renta de casetas en el Sur de Tamaulipas y toda la República Mexicana">
-    <meta name="keywords" content="casetas móviles, venta de casetas, renta de casetas, unidades móviles, Tamaulipas">
-    <title>Mobile Booths | Venta y Renta de Casetas Móviles</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/1.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/logo-grande.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copiar Código</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  .card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+  }
+  h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .code-box {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #333;
+    margin-bottom: 25px;
+    border: 2px dashed #d1d5db;
+  }
+  button {
+    width: 100%;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background: #764ba2;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  button:active {
+    transform: scale(0.96);
+    background: #5b3a8a;
+  }
+  #mensaje {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #10b981;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  #mensaje.show {
+    opacity: 1;
+  }
+</style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- TICKER PUBLICITARIO                         -->
-<!-- ═══════════════════════════════════════════ -->
-<div class="ticker-wrap">
-    <div class="ticker-track" id="tickerTrack">
-        <span><i class="fas fa-industry"></i> SOMOS FABRICANTES</span>
-        <span><i class="fas fa-truck-fast"></i> ENTREGAS EN TODA LA REPÚBLICA</span>
-        <span><i class="fas fa-tag"></i> VENTA Y RENTA DE CASETAS MÓVILES</span>
-        <span><i class="fas fa-phone"></i> 833 324 4188</span>
-        <span><i class="fas fa-award"></i> +10 AÑOS DE EXPERIENCIA</span>
-        <span><i class="fas fa-star"></i> +500 PROYECTOS COMPLETADOS</span>
-        <span><i class="fas fa-industry"></i> SOMOS FABRICANTES</span>
-        <span><i class="fas fa-truck-fast"></i> ENTREGAS EN TODA LA REPÚBLICA</span>
-        <span><i class="fas fa-tag"></i> VENTA Y RENTA DE CASETAS MÓVILES</span>
-        <span><i class="fas fa-phone"></i> 833 324 4188</span>
-        <span><i class="fas fa-award"></i> +10 AÑOS DE EXPERIENCIA</span>
-        <span><i class="fas fa-star"></i> +500 PROYECTOS COMPLETADOS</span>
-    </div>
+<div class="card">
+  <h2>Tu código</h2>
+  <p>Toca el botón para copiarlo</p>
+  
+  <div class="code-box">4217 4701 9503 9116</div>
+  
+  <button id="btnCopiar" onclick="copiarCodigo()">📋 Copiar Código</button>
+  
+  <div id="mensaje">¡Copiado al portapapeles! ✓</div>
 </div>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- NAVBAR                                      -->
-<!-- ═══════════════════════════════════════════ -->
-<header class="navbar" id="mainNavbar">
-    <div class="brand-container">
-        <img src="images/logo.png" alt="Logo Mobile Booths" class="logo-img">
-    </div>
-    <div class="menu-toggle" id="mobile-menu">
-        <span></span><span></span><span></span>
-    </div>
-    <nav class="nav-menu" id="nav-list">
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- HERO                                        -->
-<!-- ═══════════════════════════════════════════ -->
-<section id="inicio" class="hero">
-    <video autoplay muted loop id="bg-video" playsinline webkit-playsinline>
-        <source src="images/caseta1.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-
-    <div class="corner-badge">
-        <i class="fas fa-trophy"></i> Líderes en elk
-    </div>
-
-    <div class="hero-container">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Soluciones en <span>Unidades Móviles</span></h1>
-            <p>Diseño, innovación y resistencia para espacios modulares funcionales para toda la República Mexicana.</p>
-
-            <div class="services-cards">
-                <div class="service-card" data-service="venta">
-                    <i class="fas fa-tag"></i>
-                    <h3>VENTA</h3>
-                    <p>Casetas modernas al mejor precio.</p>
-                    <button class="service-btn" onclick="window.location.href='catalogo.html'">Ver más →</button>
-                </div>
-                <div class="service-card" data-service="renta">
-                    <i class="fas fa-calendar-check"></i>
-                    <h3>RENTA</h3>
-                    <p>Casetas para proyectos temporales.</p>
-                    <button class="service-btn" onclick="window.location.href='catalogo.html'">Ver más →</button>
-                </div>
-                <div class="service-card" data-service="personalizacion">
-                    <i class="fas fa-ruler-combined"></i>
-                    <h3>PERSONALIZACIÓN</h3>
-                    <p>Diseños adaptados a tus necesidades.</p>
-                    <button class="service-btn" onclick="window.location.href='catalogo.html?section=personalizar&openPersonalization=true'">Ver más →</button>
-                </div>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="#quienes-somos" class="btn-primary">
-                    <i class="fas fa-arrow-down"></i> Conócenos
-                </a>
-                <a href="catalogo.html" class="btn-outline">
-                    <i class="fas fa-search"></i> Ver Catálogo
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- STATS                                       -->
-<!-- ═══════════════════════════════════════════ -->
-<div class="stats-section">
-    <div class="stats-container">
-        <div class="stat-item" data-aos="zoom-in">
-            <i class="fas fa-building"></i>
-            <div class="stat-number">+500</div>
-            <div class="stat-label">Proyectos Completados</div>
-        </div>
-        <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
-            <i class="fas fa-smile"></i>
-            <div class="stat-number">+300</div>
-            <div class="stat-label">Clientes Satisfechos</div>
-        </div>
-        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-            <i class="fas fa-truck-fast"></i>
-            <div class="stat-number">+200</div>
-            <div class="stat-label">Entregas Realizadas</div>
-        </div>
-        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
-            <i class="fas fa-award"></i>
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Calidad Certificada</div>
-        </div>
-    </div>
-</div>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- ABOUT                                       -->
-<!-- ═══════════════════════════════════════════ -->
-<section id="quienes-somos" class="about-section">
-    <div class="about-container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-eyebrow"><i class="fas fa-medal"></i> Nuestra Trayectoria</span>
-            <h2>Especialistas en Casetas y <span>Unidades Móviles</span></h2>
-            <div class="section-rule"></div>
-        </div>
-        <div class="about-grid">
-            <div class="about-text" data-aos="fade-right">
-                <p>En <strong>Mobile Booths S.A. De C.V.</strong>, nos dedicamos a transformar espacios modulares en soluciones funcionales. Con años de experiencia en el mercado mexicano, garantizamos calidad que supera las normativas más estrictas. Nuestro compromiso es ofrecer productos duraderos, seguros y diseñados para satisfacer las necesidades específicas de cada cliente, ya sea en el sector industrial, comercial o de eventos.</p>
-                <ul class="features-list">
-                    <li><i class="fas fa-check-circle"></i> Entregas rápidas y seguras en toda la República Mexicana.</li>
-                    <li><i class="fas fa-check-circle"></i> Materiales de alta resistencia térmica certificados.</li>
-                    <li><i class="fas fa-check-circle"></i> Diseños personalizados según las necesidades de tu proyecto.</li>
-                    <li><i class="fas fa-check-circle"></i> Opciones de renta y venta adaptables a tu presupuesto.</li>
-                </ul>
-            </div>
-            <div class="about-image" data-aos="fade-left">
-                <img src="images/fondo.jpeg" alt="Instalaciones Mobile Booths">
-                <div class="experience-badge">
-                    <span class="years">+10</span>
-                    <span class="exp-text">Años de Experiencia</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- BANNER — SECTORES DE APLICACIÓN (con imágenes de fondo) -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="sectors-section">
-    <div class="sectors-container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-eyebrow"><i class="fas fa-map-marked-alt"></i> Dónde Operamos</span>
-            <h2>Soluciones para <span>Cada Sector</span></h2>
-            <div class="section-rule"></div>
-            <p>Nuestras casetas móviles se adaptan a cualquier industria, condición climática y necesidad operativa del país.</p>
-        </div>
-        <div class="sectors-grid" data-aos="fade-up" data-aos-delay="100">
-            <div class="sector-card">
-                <div class="sector-bg-img" ><img src="images/indu.jpeg" alt=""></div>
-                <div class="sector-overlay"></div>
-                <div class="sector-content">
-                    <div class="sector-icon"><i class="fas fa-industry"></i></div>
-                    <h3>Plantas Industriales</h3>
-                    <p>Oficinas de campo, casetas de vigilancia y módulos de control para plantas manufactureras y refinerías.</p>
-                </div>
-                <div class="sector-tag">INDUSTRIAL</div>
-            </div>
-            <div class="sector-card">
-                <div class="sector-bg-img" ><img src="images/construccion.png" alt=""></div>
-                <div class="sector-overlay"></div>
-                <div class="sector-content">
-                    <div class="sector-icon"><i class="fas fa-hard-hat"></i></div>
-                    <h3>Construcción & Obras</h3>
-                    <p>Oficinas temporales, sanitarios y vestuarios para obras de infraestructura y proyectos de construcción.</p>
-                </div>
-                <div class="sector-tag">CONSTRUCCIÓN</div>
-            </div>
-            <div class="sector-card">
-                <div class="sector-bg-img" ><img src="images/fracc.png" alt=""></div>
-                <div class="sector-overlay"></div>
-                <div class="sector-content">
-                    <div class="sector-icon"><i class="fas fa-home"></i></div>
-                    <h3>Fraccionamientos</h3>
-                    <p>Casetas de acceso controlado, módulos de seguridad y oficinas de ventas para desarrollos habitacionales.</p>
-                </div>
-                <div class="sector-tag">RESIDENCIAL</div>
-            </div>
-            <div class="sector-card">
-                <div class="sector-bg-img" ><img src="images/festival.jpeg" alt=""></div>
-                <div class="sector-overlay"></div>
-                <div class="sector-content">
-                    <div class="sector-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>Eventos & Festivales</h3>
-                    <p>Sanitarios móviles, módulos de atención y taquillas para eventos masivos, festivales y conciertos.</p>
-                </div>
-                <div class="sector-tag">EVENTOS</div>
-            </div>
-            <div class="sector-card">
-                <div class="sector-bg-img" ><img src="images/petroleo.png" alt=""></div>
-                <div class="sector-overlay"></div>
-                <div class="sector-content">
-                    <div class="sector-icon"><i class="fas fa-oil-can"></i></div>
-                    <h3>Sector Petrolero</h3>
-                    <p>Módulos habitacionales, oficinas y comedores para campamentos en zonas de extracción y refinación.</p>
-                </div>
-                <div class="sector-tag">PETROLERO</div>
-            </div>
-            <div class="sector-card">
-                <div class="sector-bg-img" ><img src="images/seguridad.png" alt=""></div>
-                <div class="sector-overlay"></div>
-                <div class="sector-content">
-                    <div class="sector-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Seguridad & Vigilancia</h3>
-                    <p>Casetas de control, garitas y módulos de supervisión para empresas, hospitales y corporativos.</p>
-                </div>
-                <div class="sector-tag">SEGURIDAD</div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ═══════════════════════════════════════════ -->
-<!-- PROCESO                                     -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="process-section">
-    <div class="process-container">
-        <div class="section-header light" data-aos="fade-up">
-            <span class="section-eyebrow"><i class="fas fa-cogs"></i> Metodología</span>
-            <h2>¿Cómo <span>Trabajamos?</span></h2>
-            <div class="section-rule"></div>
-            <p>Un proceso ágil y transparente en 5 pasos</p>
-        </div>
-        <div class="process-timeline">
-            <div class="process-step" data-aos="fade-up" data-aos-delay="0">
-                <div class="step-num">1</div>
-                <div class="step-body">
-                    <h3>Contacto Inicial</h3>
-                    <p>Nos contactas vía WhatsApp, formulario o llamada. Cuéntanos tu necesidad y te escuchamos atentamente.</p>
-                </div>
-            </div>
-            <div class="process-step" data-aos="fade-up" data-aos-delay="80">
-                <div class="step-num">2</div>
-                <div class="step-body">
-                    <h3>Asesoría y Diagnóstico</h3>
-                    <p>Te asesoramos para encontrar la mejor solución según tu presupuesto, plazo y requerimientos específicos.</p>
-                </div>
-            </div>
-            <div class="process-step" data-aos="fade-up" data-aos-delay="160">
-                <div class="step-num">3</div>
-                <div class="step-body">
-                    <h3>Diseño y Cotización</h3>
-                    <p>Recibes planos 3D de tu proyecto y una cotización detallada sin ningún costo.</p>
-                </div>
-            </div>
-            <div class="process-step" data-aos="fade-up" data-aos-delay="240">
-                <div class="step-num">4</div>
-                <div class="step-body">
-                    <h3>Fabricación</h3>
-                    <p>Construimos tu unidad con materiales de primera calidad en un tiempo récord de 15 a 30 días.</p>
-                </div>
-            </div>
-            <div class="process-step" data-aos="fade-up" data-aos-delay="320">
-                <div class="step-num">5</div>
-                <div class="step-body">
-                    <h3>Instalación y Entrega</h3>
-                    <p>Llevamos e instalamos tu caseta donde la necesites, con garantía incluida y soporte post-venta.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- LOGÍSTICA                                   -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="logistics-section">
-    <div class="logistics-container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-eyebrow"><i class="fas fa-truck"></i> Logística y Entregas</span>
-            <h2>Entregas Rápidas y <span>Seguras</span></h2>
-            <div class="section-rule"></div>
-            <p>Llevamos tu proyecto a donde lo necesites</p>
-        </div>
-        <div class="logistics-grid">
-            <div class="logistics-container"></div>
-            <div class="section-header" data-aos="fade-up"></div>
-            <div class="logistics-card-blue" data-aos="fade-right">
-                <i class="fas fa-truck-ramp-box"></i>
-                <h3>Flota Propia</h3>
-                <p>Contamos con vehículos especializados para la entrega de tus unidades móviles, garantizando puntualidad y cuidado en el traslado.</p>
-                <div class="logistics-tags">
-                    <span><i class="fas fa-check-circle"></i> Seguro de transporte</span>
-                    <span><i class="fas fa-check-circle"></i> Instalación incluida</span>
-                    <span><i class="fas fa-check-circle"></i> Rastreo de envío</span>
-                    <span><i class="fas fa-check-circle"></i> República Mexicana</span>
-                </div>
-            </div>
-            <div class="logistics-deliveries" data-aos="fade-left">
-                <h3><i class="fas fa-clipboard-list"></i> Entregas Destacadas</h3>
-                <div class="delivery-list">
-                    <div class="delivery-item">
-                        <i class="fas fa-building"></i>
-                        <div>
-                            <strong>Planta Industrial — Monterrey, NL</strong>
-                            <p>10 casetas de seguridad entregadas en 2024.</p>
-                        </div>
-                    </div>
-                    <div class="delivery-item">
-                        <i class="fas fa-building"></i>
-                        <div>
-                            <strong>Oficinas Administrativas — CDMX</strong>
-                            <p>5 oficinas móviles personalizadas.</p>
-                        </div>
-                    </div>
-                    <div class="delivery-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <div>
-                            <strong>Festival Internacional — Guadalajara</strong>
-                            <p>20 sanitarios móviles + casetas de vigilancia.</p>
-                        </div>
-                    </div>
-                    <div class="delivery-item">
-                        <i class="fas fa-home"></i>
-                        <div>
-                            <strong>Fraccionamiento Residencial — Querétaro</strong>
-                            <p>8 casetas de acceso controlado.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- BANNER PROMO PRINCIPAL                      -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="promo-banner" data-aos="fade-up">
-    <div class="promo-banner-inner">
-        <div class="promo-text-panel">
-            <span class="promo-badge"><i class="fas fa-fire"></i> OFERTAS ESPECIALES 2026</span>
-            <h2>¡Descuentos <span>todo el año</span>!</h2>
-            <p>Aprovecha nuestras promociones en venta y renta de casetas móviles. Cotización sin costo, diseño personalizado y entrega garantizada en toda la República.</p>
-            <div class="promo-btns">
-                <a href="catalogo.html" class="btn-primary">
-                    <i class="fas fa-search"></i> Ver Catálogo
-                </a>
-                <a href="contacto.html" class="btn-outline">
-                    <i class="fas fa-envelope"></i> Cotizar Ahora
-                </a>
-            </div>
-        </div>
-        <div class="promo-visual-panel">
-            <img src="images/fondo.jpeg" alt="Casetas Mobile Booths">
-            <div class="promo-visual-overlay"></div>
-            <div class="promo-visual-stat">
-                <span class="big">15-30</span>
-                <small>DÍAS DE FABRICACIÓN</small>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- WHATSAPP                                    -->
-<!-- ═══════════════════════════════════════════ -->
-<a href="https://wa.me/528333244188" class="wpp-float" target="_blank" rel="noopener">
-    <i class="fab fa-whatsapp"></i>
-    <span>¡Cotiza aquí!</span>
-</a>
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- FOOTER                                      -->
-<!-- ═══════════════════════════════════════════ -->
-<footer class="main-footer">
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="images/Logo - 360.png" alt="Logo 360" class="logo-imgg">
-            <p>La calidad nos distingue.</p>
-            <p class="texto-cursivo">SOMOS FABRICANTES</p>
-            <div class="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=100066891784108" class="social-icon" target="_blank" rel="noopener" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://wa.me/528333244188" class="social-icon" target="_blank" rel="noopener" aria-label="WhatsApp">
-=======
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRES SESENTA CONSULTORÍA | Lo que se mide, se puede mejorar</title>
+<script>
+  function copiarCodigo() {
+    const codigo = "4217470195039116";
     
-    <!-- Metaetiquetas básicas -->
-    <meta name="description" content="Tres Sesenta Consultoría: Transformamos datos en resultados. Especialistas en estrategia empresarial con visión 360°. Lo que se mide, se puede mejorar.">
-    <meta name="keywords" content="consultoría, estrategia empresarial, mejora continua, análisis de datos, consultoría México, transformación digital">
-    <meta name="author" content="Tres Sesenta Consultoría, S.A. de C.V.">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tusitio.com/">
-    <meta property="og:title" content="Tres Sesenta Consultoría | Lo que se mide, se puede mejorar">
-    <meta property="og:description" content="Consultoría estratégica con visión 360°. Optimizamos tus recursos y actuamos con precisión quirúrgica para mejorar tus resultados.">
-    <meta property="og:image" content="https://tusitio.com/img/logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Tres Sesenta Consultoría">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tres Sesenta Consultoría | Lo que se mide, se puede mejorar">
-    <meta name="twitter:description" content="Consultoría estratégica con visión 360°. Transformamos datos en resultados tangibles para tu empresa.">
-    <meta name="twitter:image" content="https://tusitio.com/img/logo.png">
-    
-    <meta name="theme-color" content="#dd01c0">
-    
-    <!-- CSS Externos -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
-</head>
+    navigator.clipboard.writeText(codigo).then(() => {
+      const btn = document.getElementById("btnCopiar");
+      const msg = document.getElementById("mensaje");
+      
+      btn.innerHTML = "¡Copiado! ✓";
+      msg.classList.add("show");
+      
+      setTimeout(() => {
+        btn.innerHTML = "📋 Copiar Código";
+        msg.classList.remove("show");
+      }, 2000);
+      
+    }).catch(() => {
+      // Fallback para navegadores viejos
+      const input = document.createElement("input");
+      input.value = codigo;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      document.body.removeChild(input);
+      alert("Código copiado: " + codigo);
+    });
+  }
+</script>
 
-<body>
-   <header class="navbar">
-        <div class="brand-container">
-            <img src="img/logo.png" alt="Logo de Tres Sesenta Consultoría" class="logo-img">
-            <div class="brand-text">
-                <h1>TRES SESENTA CONSULTORÍA, S.A. DE C.V.</h1>
-                <p class="brand-slogan">Lo que se mide, se puede mejorar.</p>
-            </div>
-        </div>
-        
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span><span></span><span></span>
-        </div>
-
-        <nav class="nav-menu" id="nav-list">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="cata2.html">Servicios</a></li>
-                <li><a href="localizaciones.html">Localizaciones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>               
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Sección principal con video -->
-    <section class="hero-half" id="inicio">
-        <video autoplay muted loop class="hero-video">
-            <source src="img/p1.mp4" type="video/mp4">
-            Tu navegador no soporta la reproducción de video.
-        </video>
-        <div class="hero-overlay">
-            <h1 class="hero-title">LO QUE SE MIDE,<br> SE PUEDE MEJORAR.</h1>
-            <p class="hero-subtitle">Tres Sesenta Consultoría, <br> S.A. de C.V.</p>
-        </div>
-    </section>
-    
-    <!-- Sección de servicios/beneficios -->
-    <section class="hero2" id="servicios">
-        <div class="text">
-            <p class="subti">Elíge a Tres Sesenta Consultoría por...</p>
-            <h1>EL PODER DE LA ESTRATEGIA:</h1>
-            
-            <ul class="features-list">
-                <li class="feature-item">
-                    <div class="feature-icon">
-                        <span>✓</span>
-                    </div>
-                    <div class="feature-content">
-                        <span class="feature-title">Respuesta Inmediata:</span>
-                        <p class="feature-desc">Analizamos cada escenario con visión 360° para optimizar sus recursos y actuar con precisión quirúrgica en tiempo real.</p>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <div class="feature-icon">
-                        <span>✓</span>
-                    </div>
-                    <div class="feature-content">
-                        <span class="feature-title">Resultados Garantizados:</span>
-                        <p class="feature-desc">Cada movimiento lo realizamos con personal altamente calificado.</p>
-                    </div>
-                </li>
-                <li class="feature-item">
-                    <div class="feature-icon">
-                        <span>✓</span>
-                    </div>
-                    <div class="feature-content">
-                        <span class="feature-title">Nuestra Premisa:</span>
-                        <p class="feature-desc">Lo que se mide, se puede mejorar.</p>
-                    </div>
-                </li>
-            </ul>
-            
-            <a href="contacto.html" class="btn-estrategia">HABLEMOS DE TU PROYECTO →</a>
-        </div> 
-        <div class="image">
-            <img src="img/gt.png" alt="Estrategia de marketing y consultoría">
-            <div class="badge">+8<br><span>Anños de experiencia</span></div>
-        </div>
-    </section>
-
-    <!-- Sección de Valores -->
-    <section class="valores-section">
-        <div class="valores-container">
-            <p class="valores-subtitulo">NUESTRO COMPROMISO</p>
-            <h2 class="valores-titulo">LO QUE <span>OFRECEMOS</span> A TU EMPRESA</h2>
-            
-            <div class="valores-grid">
-                <!-- Tarjeta 1 - Enfoque 360° -->
-                <div class="valor-card">
-                    <div class="valor-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>ENFOQUE 360°</h3>
-                    <p>Análisis integral de tu negocio desde todas las perspectivas</p>
-                </div>
-                
-                <!-- Tarjeta 2 - Respuesta Inmediata -->
-                <div class="valor-card">
-                    <div class="valor-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>RESPUESTA INMEDIATA</h3>
-                    <p>Actuamos con agilidad para aprovechar cada oportunidad</p>
-                </div>
-                
-                <!-- Tarjeta 3 - Datos que Impulsan -->
-                <div class="valor-card">
-                    <div class="valor-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>DATOS QUE IMPULSAN</h3>
-                    <p>Decisiones basadas en métricas, no en corazonadas</p>
-                </div>
-                
-                <!-- Tarjeta 4 - Confidencialidad -->
-                <div class="valor-card">
-                    <div class="valor-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>CONFIDENCIALIDAD</h3>
-                    <p>Tu información está segura bajo estrictos estándares</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Botón flotante WhatsApp -->
-    <a href="https://wa.me/528333244188" class="wpp-float" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Pie de página -->
-    <footer class="main-footer" id="contacto">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="img/logo.png" alt="Logo de Tres Sesenta Consultoría" class="logo-imgg">
-                <p>Tres Sesenta Consultoría, S.A. De C.V.</p>
-            </div>
-            <p class="footer-slogan">Lo que se mide, se puede mejorar.</p>
-            <div class="footer-social">
-                <a href="https://facebook.com/tu_pagina" class="social-icon fb" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook-f"></i>
-                </a> 
-                <a href="https://wa.me/528333244188" class="social-icon wpp" target="_blank" rel="noopener noreferrer">
->>>>>>> f788478f8d7bd4fc6f042e9ca4e269747883f6b4
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-<<<<<<< HEAD
-            <p>&copy; 2026 Mobile Booths S.A. De C.V. Todos los derechos reservados.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/script.js"></script>
-=======
-            <p>&copy; 2026 Tres Sesenta Consultoría, S.A. De C.V. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Enlace al JavaScript externo (Limpio y ordenado) -->
-    <script src="js/index.js"></script>
->>>>>>> f788478f8d7bd4fc6f042e9ca4e269747883f6b4
 </body>
 </html>
